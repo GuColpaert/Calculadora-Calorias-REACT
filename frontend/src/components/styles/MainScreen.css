@@ -1,0 +1,163 @@
+/* Faz o componente preencher toda a tela */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main-container {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #4caf50, #a5d6a7);
+}
+
+  /* Título */
+  h1 {
+    margin-top: 10vh;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-shadow: #000 8px 5px 30px;
+  }
+  
+  .highlight {
+    color: #111111;
+    animation: blink 0.5s infinite; /* Aplica a animação de piscar */
+    
+  }
+  
+  /* Estilização dos ícones */
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .icon-circle {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 5px 8px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0em 0em 1em rgb(97, 97, 97);
+  }
+  
+  .icon-circle img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  /* Animando os ícones */
+  .circle-container {
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0.9;
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Suaviza transições */
+  }
+  
+  .circle-container.active {
+    opacity: 1;
+    transform: scale(1.2); /* Ampliação suave */
+    font-weight: 600;
+  }
+  
+  /* Botão */
+  .calculate-button {
+    margin-top: 50px;
+    background: linear-gradient(90deg, #000, #333);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .calculate-button .button-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .calculate-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #28a745, #093b14);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .calculate-button:hover .button-icon {
+    transform: translateX(8px);
+  }
+  
+  .calculate-button:active {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1480px) {
+    .main-container {
+        height: auto;
+        background-color: #f9f9f9;
+      }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .features {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .icon-circle {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .icon-circle img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .calculate-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+    }
+  }

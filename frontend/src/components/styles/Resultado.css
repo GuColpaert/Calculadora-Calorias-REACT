@@ -1,0 +1,116 @@
+.resultado-container {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .result-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para a transformação e sombra */
+}
+
+.result-card:hover {
+  transform: translateY(-5px); /* Eleva o card quando o mouse passar sobre ele */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte para o efeito */
+}
+  
+  .result-icon {
+    position: absolute;
+    top: 50%;
+    left: 160px; /* Alinha o ícone à esquerda */
+    transform: translateY(-50%); /* Mantém o ícone verticalmente centralizado */
+    font-size: 2rem;
+    color: #f39c12; /* Cor dos ícones */
+  }
+  
+  .result-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .go-back-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .continue-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /* Responsividade */
+@media (max-width: 768px) {
+  .resultado-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .result-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
+    text-align: left;
+    position: relative; /* Garante que o ícone fique na posição correta */
+  }
+
+  .result-icon {
+    font-size: 1.5rem;
+    margin-left: 0; /* Remove a margem do ícone */
+    margin-top: 10px; /* Dá espaço entre o valor e o ícone */
+    position: relative; /* Torna o ícone posicionado de forma normal */
+  }
+
+  .result-value {
+    font-size: 1.4rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .go-back-button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,113 @@
+/* Background verde com gradiente */
+/* Background verde com gradiente */
+.carousel-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #4caf50, #a5d6a7);
+    padding: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+  }
+  
+  .carousel-container h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 100px;
+  }
+  
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .carousel-items {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    transition: transform 0.5s ease-in-out; /* Animação para troca das fotos */
+  }
+  
+  .carousel-item {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-image {
+    border-radius: 50%;
+    width: 180px; /* Aumentado de 100px para 180px */
+    height: 180px; /* Aumentado de 100px para 180px */
+    object-fit: cover;
+    margin: 0 auto;
+    border: 4px solid white; /* Borda mais grossa */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Efeito ao passar o mouse na imagem */
+  .carousel-image:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  }
+  
+  .carousel-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 4em; /* Aumentado de 3em para 4em */
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  /* Efeito ao passar o mouse na seta */
+  .carousel-arrow:hover {
+    color: #f1f1f1;
+    transform: scale(1.2); /* Aumenta um pouco a seta ao passar o mouse */
+  }
+  
+  .nomes {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+  }
+
+  /* Responsividade */
+@media (max-width: 980px) {
+    .carousel-container {
+      width: 95%; /* Largura maior em telas pequenas */
+      padding: 40px 0; /* Menos padding */
+    }
+  
+    .carousel-container h2 {
+      font-size: 2em; /* Fonte menor em telas pequenas */
+    }
+  
+    .carousel-arrow {
+      font-size: 3em; /* Seta menor em telas pequenas */
+    }
+  
+    .carousel-items {
+      flex-direction: column; /* Itens dispostos em coluna */
+    }
+  
+    .carousel-item {
+      flex: 0 0 100%; /* Cada item ocupa 100% da largura */
+      margin-bottom: 20px; /* Espaçamento entre os itens */
+    }
+  
+    .carousel-image {
+      width: 150px; /* Imagem um pouco menor em telas pequenas */
+      height: 150px;
+    }
+  
+    .nomes {
+      font-size: 1.2em; /* Fonte um pouco menor em telas pequenas */
+    }
+  }
+  

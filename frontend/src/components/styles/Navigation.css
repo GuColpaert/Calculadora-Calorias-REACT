@@ -1,0 +1,128 @@
+/* Estilo geral da navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Estilo para a logo */
+.logo-image {
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  width: auto; /* Mantém a proporção original da imagem */
+  display: block; /* Garante que o espaço seja usado corretamente */
+}
+
+/* Links da navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #00b569; /* Cor de destaque ao passar o mouse */
+}
+
+/* Ícone do usuário dentro do menu */
+.navbar-login {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #6c63ff; /* Cor roxa do ícone */
+  border-radius: 50%;
+}
+
+/* Ícone de menu (hambúrguer) */
+.menu-toggle {
+  display: none; /* Esconde o menu toggle em telas maiores */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.menu-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsividade */
+@media (max-width: 980px) {
+  .navbar {
+    flex-direction: row; /* Mantém os elementos na mesma linha */
+    justify-content: space-between; /* Espaça os elementos entre si */
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 40px; /* Logo abaixo da navbar */
+    right: 20px; /* Encostado no canto direito */
+    background-color: white;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none; /* Esconde por padrão */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    gap: 30px;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Mostra quando o menu estiver aberto */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostra o ícone de menu em telas menores */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-login {
+    display: none; /* Esconde o ícone de login em telas menores */
+  }
+}
